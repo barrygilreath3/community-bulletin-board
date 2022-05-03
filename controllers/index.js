@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const apiRoutes = require('./api');
 const home = require('./home');
 
 //write routes here
@@ -11,6 +12,7 @@ const home = require('./home');
 //so, let's get the homepage
 //this adds the routes we define in the "home" file to our router
 router.use('/', home);
+router.use('/api', apiRoutes);
 
 //exporting the routes we've added to the router
 module.exports = router;
