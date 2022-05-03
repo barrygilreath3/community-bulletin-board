@@ -1,0 +1,20 @@
+{
+  "name": "community-bulletin-board",
+  "version": "1.0.0",
+  "description": "open source community bulletin board for you to easily rebrand for your own neighborhood",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrygilreath3/community-bulletin-board.git"
+  },
+  "author": "jpugmire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barrygilreath3/community-bulletin-board/issues"
+  },
+  "homepage": "https://github.com/barrygilreath3/community-bulletin-board#readme"
+}
