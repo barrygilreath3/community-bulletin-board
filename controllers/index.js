@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
-const home = require('./home');
 
 //write routes here
 //we can also import routes from other files. i would recommend breaking them up by feature.
@@ -11,8 +10,7 @@ const home = require('./home');
 //router.use('/', homeRoutes);
 //so, let's get the homepage
 //this adds the routes we define in the "home" file to our router
-router.use('/', home);
-router.use('/api', apiRoutes);
+router.use('/', apiRoutes);
 
 //exporting the routes we've added to the router
 module.exports = router;
