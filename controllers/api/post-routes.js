@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { postTemp } = require('../../models'); //change to match export from model
+const { Bulletin_Posts } = require('../../models'); //change to match export from model
 const authorized = require('../../utils/authorize');
 
 
 //adding a new post
 router.post('/', authorized, async (req, res) => {
     try {
-        const newPost = await postTemp.create({
+        const newPost = await Bulletin_Posts.create({
             ...req.body,
             user_id: req.session.user_id,
         });
@@ -21,9 +21,9 @@ router.post('/', authorized, async (req, res) => {
 //deleting a post
 router.delete('/:id', authorized, async (req, res) => {
     try {
-        const postData = await postTemp.destroy({
+        const postData = await Bulletin_Posts.destroy({
             where: {
-                id: req.params.id,
+                post_id: req.params.post_id,
                 user_id: req.session.user_id,
             },
         });
