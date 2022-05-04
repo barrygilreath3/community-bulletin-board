@@ -5,13 +5,22 @@ const authorized = require('../../utils/authorize');
 //dummy post data test
 const posts = [{
     postTitle: "Test Post 1",
-    username: "testauthor1",
-    postTime: Date.now()
+    username: "jpugmire",
+    postTime: new Date().toDateString(),
+    postContent: "I saw a sign that said not to drink the fountain water so i made some tea with it and now I have an infection"
 },{
     postTitle: "Test Post 2",
-    username: "testauthor2",
-    postTime: Date.now()
-}];
+    username: "afields",
+    postTime: new Date().toDateString()
+},{
+    postTitle: "Test Post 3",
+    username: "jatkinson",
+    postTime: new Date().toDateString()
+},{
+    postTitle: "Test Post 4",
+    username: "bgilreath",
+    postTime: new Date().toDateString()
+},];
 
 //get bulletin posts and render homepage
 // router.get('/', async (req, res) => {

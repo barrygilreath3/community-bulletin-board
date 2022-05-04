@@ -4,8 +4,8 @@
     <div id="page-title">Community Bulletin Board</div>
 </div>
 <div class="post-container">
-    {{#each this}}
-        {{>user-post this}}
+    {{#each posts as |post|}}
+        {{>user-post}}
     {{/each}}
     {{> user-post postTitle="Test Post 1"}}
     {{> user-post postTitle="Test Post 2"}}
