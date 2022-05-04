@@ -41,7 +41,7 @@ Bulletin_Posts.init(
       isDislike: true,
     },
     post_voidtime: {
-      type: DataTypes.dateTime,
+      type: DataTypes.DATE,
       allowNull: false,
     },
   },

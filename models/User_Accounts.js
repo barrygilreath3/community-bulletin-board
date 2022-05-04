@@ -25,11 +25,11 @@ User_Accounts.init(
       allowNull: false,
     },
     account_voidtime: {
-      type: DataTypes.dateTime,
+      type: DataTypes.DATE,
       allowNull: false,
     },
     account_type: {
-      type: Datatype.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },

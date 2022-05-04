@@ -14,33 +14,33 @@ const posts = [{
 }];
 
 //get bulletin posts and render homepage
-router.get('/', async (req, res) => {
-    try {
-        // Get all bulletin posts and JOIN with user data
-        const postData = await Bulletin_Posts.findAll({
-            include: [
-                {
-                    model: User_Accounts,
-                    attributes: ['username'],
-                },
-            ],
-        });
+// router.get('/', async (req, res) => {
+//     try {
+//         // Get all bulletin posts and JOIN with user data
+//         const postData = await Bulletin_Posts.findAll({
+//             include: [
+//                 {
+//                     model: User_Accounts,
+//                     attributes: ['username'],
+//                 },
+//             ],
+//         });
 
-        // Serialize data so the template can read it
-        const posts = postData.map((post) => post.get({ plain: true }));
+//         // Serialize data so the template can read it
+//         const posts = postData.map((post) => post.get({ plain: true }));
 
-        // Pass serialized data and session flag into template
-        res.render('home', {
-            posts,
-            logged_in: req.session.logged_in
-        });
-    } catch (err) {}
-});
+//         // Pass serialized data and session flag into template
+//         res.render('home', {
+//             posts,
+//             logged_in: req.session.logged_in
+//         });
+//     } catch (err) {}
+// });
 
 //get homepage
 router.get('/', async (req, res) => {
     try {
-        res.render('home', posts);
+        res.render('home', {posts});
     }
     catch (err) {
         res.status(500).json(err);
