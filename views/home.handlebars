@@ -1,8 +1,12 @@
 <div id="nav">
-    <div class="nav-item">Login (Placeholder)</div>
-    <div class="nav-item">Create Account (Placeholder)</div>
-    <div class="nav-item" id="page-title">Community Bulletin Board</div>
+    <div class="nav-item">Login</div>
+    <div class="nav-item">Create Account</div>
+    <div id="page-title">Community Bulletin Board</div>
 </div>
-<div>
-    placeholder for post items
+<div class="post-container">
+    {{#each this}}
+        {{>user-post postTitle={{postTitle}}}}
+    {{/each}}
+    {{> user-post postTitle="Test Post 1"}}
+    {{> user-post postTitle="Test Post 2"}}
 </div>
