@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection");
 
-class User_Accounts extends Model {}
+class User_Accounts extends Model { }
 
 User_Accounts.init(
   {
@@ -24,12 +24,12 @@ User_Accounts.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    account_voidtime: {
-      type: DataTypes.dateTime,
-      allowNull: false,
-    },
+    // account_voidtime: {
+    //   type: DataTypes.dateTime,
+    //   allowNull: false,
+    // },
     account_type: {
-      type: Datatype.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
   },
