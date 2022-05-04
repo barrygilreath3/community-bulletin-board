@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 
 const sequelize = require("../config/connection");
 
-class Bulletin_Posts extends Model {}
+class Bulletin_Posts extends Model { }
 
 Bulletin_Posts.init(
   {
@@ -40,10 +40,10 @@ Bulletin_Posts.init(
       type: DataTypes.BOOLEAN,
       isDislike: true,
     },
-    post_voidtime: {
-      type: DataTypes.dateTime,
-      allowNull: false,
-    },
+    // post_voidtime: {
+    //   type: DataTypes.dateTime,
+    //   allowNull: false,
+    // },
   },
   {
     sequelize,
