@@ -24,10 +24,10 @@ User_Accounts.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    // account_voidtime: {
-    //   type: DataTypes.dateTime,
-    //   allowNull: false,
-    // },
+    account_voidtime: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
     account_type: {
       type: DataTypes.INTEGER,
       allowNull: false,
