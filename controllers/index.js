@@ -1,15 +1,9 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
 
-//write routes here
-//we can also import routes from other files. i would recommend breaking them up by feature.
-//example: 
-//if i have a file called homeRoutes.js, which contains a route to the homepage,
-//i can import that file here like so,
-//const homeRoutes = require ('./homeRoutes');
-//router.use('/', homeRoutes);
-//so, let's get the homepage
-//this adds the routes we define in the "home" file to our router
+//what we're doing here is telling the router
+//to look in /api for a file 'index.js' (the default)
+//inside that file, we use the routes from the api, combining them in a central place.
 router.use('/', apiRoutes);
 
 //exporting the routes we've added to the router
