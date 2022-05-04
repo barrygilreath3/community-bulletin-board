@@ -1,0 +1,22 @@
+.bootstrap-modal {
+    margin: 20px;
+}
+.modal-content {
+    background-color:rgb(56, 58, 58);
+    color: white;
+    font-size: large;
+}
+input {
+    height: 55px;
+    width: 100%;
+}
+.btn-secondary:hover {
+    background-color: #1DA1F2 !important;
+    color: white !important;
+    border: white !important;
+}
+.btn-secondary:focus {
+    background-color: #4BB543 !important;
+    color: white !important;
+    border: white !important;
+}
