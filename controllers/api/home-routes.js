@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Bulletin_Posts, User_Accounts } = require('../../models'); //change to match models
 const authorized = require('../../utils/authorize');
 
+<<<<<<< Updated upstream
 
 //get bulletin posts and render homepage
 router.get('/', async (req, res) => {
@@ -25,6 +26,8 @@ router.get('/', async (req, res) => {
             logged_in: req.session.logged_in
         });
     } catch (err) {
+=======
+>>>>>>> Stashed changes
 //dummy post data test
 const posts = [{
     postTitle: "Test Post 1",
