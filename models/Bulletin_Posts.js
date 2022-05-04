@@ -40,10 +40,10 @@ Bulletin_Posts.init(
       type: DataTypes.BOOLEAN,
       isDislike: true,
     },
-    // post_voidtime: {
-    //   type: DataTypes.dateTime,
-    //   allowNull: false,
-    // },
+    post_voidtime: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
   },
   {
     sequelize,
