@@ -1,1 +1,12 @@
-<h4>Hello world!</h4>
+<div id="nav">
+    <div class="nav-item">Login</div>
+    <div class="nav-item">Create Account</div>
+    <div id="page-title">Community Bulletin Board</div>
+</div>
+<div class="post-container">
+    {{#each posts as |post|}}
+        {{>user-post}}
+    {{/each}}
+    {{> user-post postTitle="Test Post 1"}}
+    {{> user-post postTitle="Test Post 2"}}
+</div>
