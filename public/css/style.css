@@ -1,0 +1,24 @@
+body {
+    margin: 0px;
+}
+
+#nav{
+    background-color: #cfcfcf;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+#page-title{
+    justify-self: flex-end;
+    margin-left: auto;
+    font-size: x-large;
+}
+
+.nav-item{
+    padding: 20px;
+}
+
+.nav-item:hover{
+    background-color: #ababab;
+}

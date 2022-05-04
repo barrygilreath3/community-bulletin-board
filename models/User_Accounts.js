@@ -22,17 +22,24 @@ User_Accounts.init(
     },
     account_crtd_date: {
       type: DataTypes.DATE,
+      allowNull: false,
     },
-    account_voidtime: {},
-    account_type: {},
+    account_voidtime: {
+      type: DataTypes.dateTime,
+      allowNull: false,
+    },
+    account_type: {
+      type: Datatype.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     timestamps: false,
-
+    freezeTableName: true,
     underscored: true,
-    modelName: "User_Accounts",
+    modelName: "user_accounts",
   }
 );
 
-module.exports = user_accounts;
+module.exports = User_Accounts;
