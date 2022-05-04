@@ -1,0 +1,20 @@
+[
+    {
+        "user_id": "1",
+        "post_title": "post1",
+        "post_text": "Hey, this is a test.",
+        "post_date": "2022-05-02 11:45:02",
+        "likes": 3,
+        "Dislike": 1,
+        "post_voidtime": "2022-05-05 23:59:59"
+    },
+    {
+        "user_id": "2",
+        "post_title": "post2",
+        "post_text": "woah. what a cool page",
+        "post_date": "2022-05-03 14:02:03",
+        "likes": 2,
+        "Dislike": 0,
+        "post_voidtime": "2022-05-05 23:59:59"
+    }
+]
