@@ -1,0 +1,42 @@
+[
+    {
+        "user_id": "1",
+        "post_title": "post1",
+        "post_text": "Hey, this is a test.",
+        "post_date": "2022-05-02 11:45:02",
+        "likes": 3,
+        "Dislike": 1
+    },
+    {
+        "user_id": "2",
+        "post_title": "post2",
+        "post_text": "woah. what a cool page",
+        "post_date": "2022-05-03 14:02:03",
+        "likes": 2,
+        "Dislike": 0
+    },
+    {
+        "user_id": "3",
+        "post_title": "post3",
+        "post_text": "OMG this is a great website. I could post here everyday.",
+        "post_date": "2022-05-03 16:02:03",
+        "likes": 3,
+        "Dislike": 0
+    },
+    {
+        "user_id": "3",
+        "post_title": "post4",
+        "post_text": "Like forreal. Everyday",
+        "post_date": "2022-05-04 12:26:53",
+        "likes": 1,
+        "Dislike": 3
+    },
+    {
+        "user_id": "4",
+        "post_title": "post5",
+        "post_text": "Hey guys, this is my first post. Think you could drop me a like?",
+        "post_date": "2022-05-04 12:27:53",
+        "likes": 4,
+        "Dislike": 0
+    }
+]

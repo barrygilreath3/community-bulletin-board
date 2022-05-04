@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require("sequelize");
-
 const sequelize = require("../config/connection");
 
 class Bulletin_Posts extends Model { }
@@ -10,15 +9,16 @@ Bulletin_Posts.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
+      primaryKey: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user_account",
-        key: "id",
+        model: "user_accounts",
+        key: "user_id",
       },
       allowNull: false,
-      primaryKey: true,
+
     },
     post_title: {
       type: DataTypes.STRING,
@@ -40,10 +40,10 @@ Bulletin_Posts.init(
       type: DataTypes.BOOLEAN,
       isDislike: true,
     },
-    post_voidtime: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
+    // post_voidtime: {
+    //   type: DataTypes.DATE,
+    //   allowNull: false,
+    // },
   },
   {
     sequelize,
