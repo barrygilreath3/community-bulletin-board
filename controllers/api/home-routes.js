@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
         req.session.save(async () => {
             if (req.session.logged_in) {
                 //if we're logged in, we need to grab the username.
-                var userAcc = await User_Accounts.findOne({ where: { user_id: req.session.user_id } });
+                var userAcc = await User_Accounts.findOne({ where: { id: req.session.user_id } });
                 //render logged in version of the page with updated nav.
                 var loginData = {
                     posts: posts,
