@@ -9,7 +9,7 @@ For this project, four team members collaborated to conceive, design, and build 
 - Only 33% of Americans consider their neighbors friends or close friends, whereas 66% consider their neighbors strangers or acquaintances.
 - 27% of Americans are active in online neighborhood groups.
 - Americans in the Midwest region are most likely to be friends with their neighbors.
-- 1 in 4 Americans consider their neighbors strangers.*
+- 1 in 4 Americans consider their neighbors strangers.**
 
 Our team wants to help these numbers improve, and so we designed a helpful, easy-to use community bulletin-board application.  This app is open source and easily distributable for communities to use for their own purposes.  The app features a login / registration system and a chronological view of posts spanning vertically down the site.  When the registered user reaches the bottom of the page of the default rendered posts (15 max), the user can choose to render 15 more if there are older posts in the database.
 
@@ -17,13 +17,13 @@ This application was built using ...
 
 --
 
-* Source: https://www.thezebra.com/resources/home/neighbors-survey/
+** Source: https://www.thezebra.com/resources/home/neighbors-survey/
  
  ## User Story
  ```
  As a community member
  I WANT to connect with people of my own community
- SO THAT I can be informed about community events, read comments from other community members, and share my thoughts and opinons as well.
+ SO THAT I can be informed about community events, read comments from other community members, and share my own thoughts as well.
  ```
  
 ## Mockup
