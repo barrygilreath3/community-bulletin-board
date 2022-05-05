@@ -5,18 +5,18 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (username && password) {
-    const response = await fetch('/user', {
+    const response = await fetch('/user/', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.reload();
     } else {
       alert(response.statusText);
     }
   }
 };
 
-document.getElementById('signup-form-btn').addEventListener('submit', signupFormHandler);
+document.getElementById('signup-form-btn').addEventListener('click', signupFormHandler);

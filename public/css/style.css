@@ -21,7 +21,8 @@ body {
     margin-left: auto;
     font-size: x-large;
     font-weight: 700;
-    padding: 15px 20px 10px;
+    margin-right: 20px;
+    align-self: center;
 }
 
 .nav-item {
@@ -39,23 +40,51 @@ body {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: 10px 100px 10px 100px;
 }
 
 .user-post {
+    flex: 1 0 35%;
     width: 35rem;
-    height: 10rem;
-    min-height: fit-content;
-    margin: 15px;
-    background-color: #ededed;
+    max-width: 40%;
+    height: 13rem;
+    max-height: fit-content;
+    margin: 10px;
+    background-color: var(--light);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
 }
 
+@media only screen and (max-width: 1070px) {
+    .user-post {
+        max-width: 50%;
+        height: 18rem;
+    }
+
+    .post-container {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .user-post {
+        flex: 1 0 55%;
+        max-width: 100%;
+        height: 13rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .user-post {
+        height: 16rem;
+    }
+}
+
 .post-header {
-    background-color: #dedede;
+    background-color: var(--mid);
+    color: white;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -65,17 +94,21 @@ body {
     font-weight: 500;
 }
 
-.post-title {
-    flex-grow: 0.75;
-    margin-left: 10px;
-}
-
 .post-username {
     margin-left: 15px;
 }
 
 .post-date {
     margin-right: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+    .post-header {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        min-height: fit-content;
+    }
 }
 
 .post-content {
@@ -113,4 +146,46 @@ body {
 .thumbs {
     margin-right: 10px;
     color: black;
+}
+
+.username {
+    justify-self: flex-start;
+    font-size: x-large;
+    font-weight: 600;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 15px !important;
+    right: 15px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.post-btn {
+    width: 8rem;
+    min-width: fit-content;
+    height: 2.5rem;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--blue);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    margin-right: 10px;
+}
+
+.up-btn {
+    width: 2.45rem;
+    height: 2.45rem;
+    border: none;
+    border-radius: 100px;
+    background-color: white;
+    color: #2BADF6;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2.55rem;
 }
