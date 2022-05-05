@@ -9,17 +9,17 @@ const loginFormHandler = async (event) => {
     // Send a POST request to the API endpoint
     const response = await fetch('/user/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      document.location.reload();
     } else {
       alert(response.statusText);
     }
   }
 }
 
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+document.getElementById('login-form-btn').addEventListener('click', loginFormHandler);
