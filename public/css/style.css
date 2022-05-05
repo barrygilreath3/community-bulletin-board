@@ -1,52 +1,59 @@
+:root {
+    --light: #C4C4C4;
+    --mid: #898989;
+    --dark: #484848;
+    --blue: #2BADF6;
+}
+
 body {
     margin: 0px;
     font-family: 'Work Sans';
 }
 
-#nav{
-    background-color: #cfcfcf;
+#nav {
+    background-color: var(--light);
     display: flex;
     flex-direction: row;
-    column-gap: 30px;
 }
 
-#page-title{
+#page-title {
     justify-self: flex-end;
     margin-left: auto;
     font-size: x-large;
-    font-weight: 500;
+    font-weight: 700;
     padding: 15px 20px 10px;
 }
 
-.nav-item{
-    padding: 20px;
+.nav-item {
+    margin: 20px;
 }
 
-.nav-item:hover{
-    background-color: #ababab;
+.nav-item:hover {
+    font-weight: 600;
+    color: var(--blue);
 }
 
-.post-container{
-    display:flex;
+.post-container {
+    display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
-.user-post{
-    width: 40vmax;
-    height: 25vmin;
-    margin-top: 20px;
+.user-post {
+    width: 35rem;
+    height: 10rem;
+    min-height: fit-content;
+    margin: 15px;
     background-color: #ededed;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    
 }
 
-.post-header{
+.post-header {
     background-color: #dedede;
     width: 100%;
     display: flex;
@@ -54,23 +61,55 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 15%;
+    font-weight: 500;
 }
 
-.post-title{
+.post-title {
     flex-grow: 0.75;
     margin-left: 10px;
 }
 
-.post-date{
+.post-username {
+    margin-left: 15px;
+}
+
+.post-date {
+    margin-right: 15px;
+}
+
+.post-content {
+    width: 100%;
+    height: 100%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.post-text {
+    padding: 15px;
+    width: 100%;
+    height: 80%;
+    text-align: left;
+    justify-content: left;
+    align-content: left;
+}
+
+.likes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    font-weight: 500;
+}
+
+.num-likes {
     margin-right: 10px;
 }
 
-.post-text-content{
-    margin: 1.5rem 0 1.5rem;
-    width: 90%;
-    flex-grow: 1;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    overflow: auto;
+.thumbs {
+    margin-right: 10px;
+    color: black;
 }
