@@ -6,7 +6,7 @@ class User_Accounts extends Model { }
 
 User_Accounts.init(
   {
-    user_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
@@ -25,10 +25,10 @@ User_Accounts.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
-    // account_voidtime: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    // },
+    account_voidtime: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
     account_type: {
       type: DataTypes.INTEGER,
       allowNull: false,
