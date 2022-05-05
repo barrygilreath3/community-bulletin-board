@@ -31,6 +31,7 @@ body {
 .nav-item:hover {
     font-weight: 600;
     color: var(--blue);
+    cursor: pointer;
 }
 
 .post-container {
@@ -112,4 +113,22 @@ body {
 .thumbs {
     margin-right: 10px;
     color: black;
+}
+
+.create-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#create-post-btn {
+    width: 100px;
+    background-color: #1c7bb0;
+    text-align: center;
+    color: white;
+    font-weight:300;
+}
+
+#create-post-btn:hover {
+    background-color: #145980;
+    cursor: pointer;
 }

@@ -1,7 +1,4 @@
 <div class="bootstrap-modal">
-
-    <button type="button" id="publish-button" class="btn btn-lg btn-primary">Publish Post</button>
-
     <!-- Modal HTML -->
     <div id="create-post-modal" class="modal fade" data-backdrop="true" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
@@ -21,25 +18,10 @@
                 <div class="modal-footer justify-content-center border-0">
                     <div class="form-group">
                         <button class="btn btn-secondary btn-light btn-lg active" data-toggle="button"
-                            type="submit">Publish</button>
+                            type="submit" id="publish-btn">Publish</button>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </div>
-
-<script src=""></script>
-
-
-{{!-- This is the JQUERY I used to launch the create new post modal --}}
-
-{{!-- 
-    $(document).ready(function(){
-        $("#publish-button").click(function(){
-            $("#create-post-modal").modal('show');
-        });
-    });
- --}}

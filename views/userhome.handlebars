@@ -1,3 +1,6 @@
+{{!-- create post modal --}}
+{{>createpost}}
+
 <div id="nav">
     {{!-- <div class="nav-item" id="nav-login-btn">Login</div>
     <div class="nav-item" id="nav-register-btn">Create Account</div> --}}
@@ -12,5 +15,12 @@
     {{!-- {{> user-post post_title="Test Post 1"}}
     {{> user-post post_title="Test Post 2"}} --}}
 </div>
+<div class="create-btn-container">
+    <div id="create-post-btn">
+        create post
+    </div>
+</div>
 
+<script src="/js/loggedinListeners.js"></script>
 <script src="/js/logout.js"></script>
+<script src="/js/createPost.js"></script>
