@@ -1,28 +1,35 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
 const { Bulletin_Posts, User_Accounts } = require('../../models'); //change to match models
 const authorized = require('../../utils/authorize');
 
 //get bulletin posts and render homepage
 router.get('/', async (req, res) => {
     try {
-        // Get all bulletin posts and JOIN with user data
+        // Grab the posts and set up the data, we might want to abstract this to its own call.
         const postData = await Bulletin_Posts.findAll({
             include: [
-                {
+                {// Get all bulletin posts and JOIN with user data
                     model: User_Accounts,
                     attributes: ['username'],
                 },
             ],
         });
-
-        // Serialize data so the template can read it
         const posts = postData.map((post) => post.get({ plain: true }));
         posts.forEach(post => post.post_date = post.post_date.toLocaleString());
-        // Pass serialized data and session flag into template
-        res.render('home', {
-            posts
-            //logged_in: req.session.logged_in
+
+        //check user session cookie.
+        //no matter what, we are gonna save the session to the store.
+        req.session.save(() => {
+            if(req.session.loggedIn){
+                //render logged in version of the page with updated nav.
+            }
+            else {
+                //render standard homepage
+                res.render('home', {
+                    posts // Pass serialized data and session flag into template
+                });
+            }
+
         });
     } catch (err) { }
 });

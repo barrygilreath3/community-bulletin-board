@@ -8,11 +8,14 @@ const session = require('express-session');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const fiveMin = 1000 * 60 * 5;
+
 //set up sessions
 const sess = {
     secret: process.env.sessionSecret,
     resave: false,
     saveUninitialized: true,
+    cookie: { maxAge: fiveMin }
 };
 
 app.use(session(sess));
