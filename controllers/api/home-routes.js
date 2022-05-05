@@ -15,12 +15,12 @@ router.get('/', async (req, res) => {
             ],
         });
         const posts = postData.map((post) => post.get({ plain: true }));
-        posts.forEach(post => post.post_date = post.post_date.toLocaleString());
+
 
         //check user session cookie.
         //no matter what, we are gonna save the session to the store.
         req.session.save(async () => {
-            if(req.session.logged_in){
+            if (req.session.logged_in) {
                 //if we're logged in, we need to grab the username.
                 var userAcc = await User_Accounts.findOne({ where: { user_id: req.session.user_id } });
                 //render logged in version of the page with updated nav.
@@ -36,7 +36,7 @@ router.get('/', async (req, res) => {
                 //compile homepage
                 // var source = document.querySelector('#nav-login-btn').innerHTML;
                 //render standard homepage
-                
+
                 res.render('home', {
                     posts // Pass serialized data and session flag into template
                 });

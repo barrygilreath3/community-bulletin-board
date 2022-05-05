@@ -31,12 +31,12 @@ Bulletin_Posts.init(
       allowNull: false,
     },
     likes: {
-      type: DataTypes.BOOLEAN,
-      isLike: true,
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
     },
     Dislike: {
-      type: DataTypes.BOOLEAN,
-      isDislike: true,
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
     },
     post_voidtime: {
       type: DataTypes.DATE,
