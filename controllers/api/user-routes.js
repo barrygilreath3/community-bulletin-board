@@ -3,15 +3,23 @@ const { User_Accounts } = require('../../models');
 
 //create new user
 router.post('/', async (req, res) => {
+  var userObj = {
+    "username" : req.body.username,
+    "password" : req.body.password,
+    "account_crtd_date" : "2022-05-02",
+    "account_voidtime" : null,
+    "account_type" : 0
+  }
+  const userData = await User_Accounts.create(userObj);
+
+  req.session.save(() => {
+    req.session.user_id = userData.id;
+    req.session.logged_in = true;
+
+    res.status(200).json(userData);
+  });
   try {
-    const userData = await User_Accounts.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userData);
-    });
+    
   } catch (err) {
     res.status(400).json(err);
   }

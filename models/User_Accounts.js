@@ -27,7 +27,7 @@ User_Accounts.init(
     },
     account_voidtime: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     account_type: {
       type: DataTypes.INTEGER,
