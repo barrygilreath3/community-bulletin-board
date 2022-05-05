@@ -32,6 +32,7 @@ body {
 .nav-item:hover {
     font-weight: 600;
     color: var(--blue);
+    cursor: pointer;
 }
 
 .post-container {
