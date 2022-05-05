@@ -5,7 +5,7 @@ class Bulletin_Posts extends Model { }
 
 Bulletin_Posts.init(
   {
-    post_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
@@ -15,10 +15,8 @@ Bulletin_Posts.init(
       type: DataTypes.INTEGER,
       references: {
         model: "user_accounts",
-        key: "user_id",
+        key: "id",
       },
-      allowNull: false,
-
     },
     post_title: {
       type: DataTypes.STRING,
@@ -40,10 +38,10 @@ Bulletin_Posts.init(
       type: DataTypes.BOOLEAN,
       isDislike: true,
     },
-    // post_voidtime: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    // },
+    post_voidtime: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
   },
   {
     sequelize,
