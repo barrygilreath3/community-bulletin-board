@@ -3,26 +3,6 @@ const sequelize = require('../../config/connection');
 const { Bulletin_Posts, User_Accounts } = require('../../models'); //change to match models
 const authorized = require('../../utils/authorize');
 
-//dummy post data test
-// const posts = [{
-//     postTitle: "Test Post 1",
-//     username: "jpugmire",
-//     postTime: new Date().toDateString(),
-//     postContent: "I saw a sign that said not to drink the fountain water so i made some tea with it and now I have an infection"
-// }, {
-//     postTitle: "Test Post 2",
-//     username: "afields",
-//     postTime: new Date().toDateString()
-// }, {
-//     postTitle: "Test Post 3",
-//     username: "jatkinson",
-//     postTime: new Date().toDateString()
-// }, {
-//     postTitle: "Test Post 4",
-//     username: "bgilreath",
-//     postTime: new Date().toDateString()
-// },];
-
 //get bulletin posts and render homepage
 router.get('/', async (req, res) => {
     try {
@@ -38,7 +18,7 @@ router.get('/', async (req, res) => {
 
         // Serialize data so the template can read it
         const posts = postData.map((post) => post.get({ plain: true }));
-
+        posts.forEach(post => post.post_date = post.post_date.toLocaleString());
         // Pass serialized data and session flag into template
         res.render('home', {
             posts
@@ -46,16 +26,6 @@ router.get('/', async (req, res) => {
         });
     } catch (err) { }
 });
-
-//get homepage
-// router.get('/', async (req, res) => {
-//     try {
-//         res.render('home', { posts });
-//     }
-//     catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
 
 //if we make a separate homepage for being logged in
 // router.get('/loggedIn', authorized, async (req, res) => {
