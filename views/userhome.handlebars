@@ -4,7 +4,7 @@
 <div id="nav">
     {{!-- <div class="nav-item" id="nav-login-btn">Login</div>
     <div class="nav-item" id="nav-register-btn">Create Account</div> --}}
-    <div class="nav-item" id="welcome-msg">Welcome, {{loginData.username}}!</div>
+    <div class="username" id="welcome-msg">{{loginData.username}}</div>
     <div class="nav-item" id="nav-logout-btn">Log Out</div>
     <div id="page-title">Community Bulletin Board</div>
 </div>
@@ -12,13 +12,11 @@
     {{#each loginData.posts as |post|}}
     {{>user-post}}
     {{/each}}
-    {{!-- {{> user-post post_title="Test Post 1"}}
-    {{> user-post post_title="Test Post 2"}} --}}
 </div>
-<div class="create-btn-container">
-    <div id="create-post-btn">
-        create post
-    </div>
+
+<div class="bottom-nav">
+    <button class="post-btn" id="post-btn">create post</button>
+    <a id="up-btn" href="#page-title"><i class="fas fa-arrow-circle-up up-btn"></i></a>
 </div>
 
 <script src="/js/loggedinListeners.js"></script>
