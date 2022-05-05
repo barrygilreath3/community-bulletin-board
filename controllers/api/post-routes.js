@@ -6,21 +6,24 @@ const formatDate = require('../../utils/formatDate');
 
 //adding a new post
 router.post('/', async (req, res) => {
-    const userPost = {
-        user_id: req.session.user_id,
-        post_title: 'PLACEHOLDER',
-        post_text: req.body.textContent,
-        post_date: new Date().toISOString().slice(0, 19).replace('T', ' '),
-        likes: 0,
-        dislikes: 0,
-        post_voidtime: null,
+    if(req.session.logged_in){
+        const userPost = {
+            user_id: req.session.user_id,
+            post_title: 'PLACEHOLDER',
+            post_text: req.body.textContent,
+            post_date: new Date().toISOString().slice(0, 19).replace('T', ' '),
+            likes: 0,
+            dislikes: 0,
+            post_voidtime: null,
+        }
     }
     try {
         const newPost = await Bulletin_Posts.create(userPost);
 
         res.status(200).json(newPost);
     } catch (err) {
-        res.status(400).json(err);
+        res.statusMessage = 'You are not logged in!'
+        res.status(400).end();
     }
 });
 
