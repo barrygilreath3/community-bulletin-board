@@ -24,7 +24,10 @@ router.get('/', async (req, res) => {
                 //render logged in version of the page with updated nav.
             }
             else {
+                //compile homepage
+                // var source = document.querySelector('#nav-login-btn').innerHTML;
                 //render standard homepage
+                
                 res.render('home', {
                     posts // Pass serialized data and session flag into template
                 });
