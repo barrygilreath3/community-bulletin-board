@@ -40,7 +40,7 @@ Bulletin_Posts.init(
     },
     post_voidtime: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {

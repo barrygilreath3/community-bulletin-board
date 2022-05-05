@@ -148,6 +148,24 @@ body {
     color: black;
 }
 
+.create-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#create-post-btn {
+    width: 100px;
+    background-color: #1c7bb0;
+    text-align: center;
+    color: white;
+    font-weight:300;
+}
+
+#create-post-btn:hover {
+    background-color: #145980;
+    cursor: pointer;
+}
+
 .username {
     justify-self: flex-start;
     font-size: x-large;
