@@ -1,0 +1,45 @@
+<div class="bootstrap-modal">
+
+    <button type="button" id="publish-button" class="btn btn-lg btn-primary">Publish Post</button>
+
+    <!-- Modal HTML -->
+    <div id="create-post-modal" class="modal fade" data-backdrop="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- <div class="modal-header d-flex align-items-end flex-column border-0">
+                    <p type="button" class="btn-close-white shadow-none border-0" data-dismiss="modal">&#x2715;</p>
+                </div> -->
+                <div class="modal-body border-0">
+
+                    <form class="form create-post">
+                        <!-- <div class="form-group"> -->
+                            <textarea class="form-control" placeholder="Write a post..." rows="10" maxlength="2200" id="new-post-content">
+                            </textarea>
+                    </form>
+
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <div class="form-group">
+                        <button class="btn btn-secondary btn-light btn-lg active" data-toggle="button"
+                            type="submit">Publish</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src=""></script>
+
+
+{{!-- This is the JQUERY I used to launch the create new post modal --}}
+
+{{!-- 
+    $(document).ready(function(){
+        $("#publish-button").click(function(){
+            $("#create-post-modal").modal('show');
+        });
+    });
+ --}}
