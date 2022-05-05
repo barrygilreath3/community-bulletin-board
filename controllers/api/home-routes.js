@@ -19,9 +19,18 @@ router.get('/', async (req, res) => {
 
         //check user session cookie.
         //no matter what, we are gonna save the session to the store.
-        req.session.save(() => {
-            if(req.session.loggedIn){
+        req.session.save(async () => {
+            if(req.session.logged_in){
+                //if we're logged in, we need to grab the username.
+                var userAcc = await User_Accounts.findOne({ where: { user_id: req.session.user_id } });
                 //render logged in version of the page with updated nav.
+                var loginData = {
+                    posts: posts,
+                    username: userAcc.username
+                };
+                res.render('userhome', {
+                    loginData
+                });
             }
             else {
                 //compile homepage
