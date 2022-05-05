@@ -2,7 +2,7 @@
 An Open-Source, Distributable Community Bulletin Board
 
 ## Overview
-For this project, four team members collaborated to conceive, design, and build a full-stack application.  Our team was motivated to find a solution to poor neighborhood communication.  According to a recent survey:
+For this project, four team members collaborated to conceive, design, and build a full-stack application.  Our team was motivated to provide a place where community members could connect with one another.  According to a recent survey:
 
 - Only 33% of Americans consider their neighbors friends or close friends, whereas 66% consider their neighbors strangers or acquaintances.
 - 27% of Americans are active in online neighborhood groups.
