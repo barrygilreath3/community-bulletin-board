@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { Bulletin_Posts } = require('../../models'); //change to match export from model
 const authorized = require('../../utils/authorize');
-const formatDate = require('../../utils/formatDate');
-
 
 
 //adding a new post
