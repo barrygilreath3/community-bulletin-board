@@ -9,7 +9,7 @@ For this project, four team members collaborated to conceive, design, and build 
 - Americans in the Midwest region are most likely to be friends with their neighbors.
 - 1 in 4 Americans consider their neighbors strangers.**
 
-Our team wants to help make neighborhoods better by bringing neighbors togehther. To achieve this goal, we designed a helpful, easy-to use community bulletin-board application.  This app is open source and easily distributable for communities to use for their own purposes.  The app features a login / registration system and a chronological view of posts spanning vertically down the site.  When the registered user reaches the bottom of the page of the default rendered posts (15 max), the user can choose to render 15 more if there are older posts in the database.
+Our team wants to help make neighborhoods better by bringing neighbors together. To achieve this goal, we designed a helpful, easy-to use community bulletin-board application.  This app is open source and easily distributable for communities to use for their own purposes.  The app features a login / registration system and a chronological view of posts spanning vertically down the site.  When the registered user reaches the bottom of the page of the default rendered posts (15 max), the user can choose to render 15 more if there are older posts in the database.
 
 --
 
