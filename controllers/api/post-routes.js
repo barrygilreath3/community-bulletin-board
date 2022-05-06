@@ -4,31 +4,23 @@ const authorized = require('../../utils/authorize');
 const formatDate = require('../../utils/formatDate');
 
 
+
 //adding a new post
-router.post('/', async (req, res) => {
-    if(req.session.logged_in){
+router.post('/', authorized, async (req, res) => {
+    try {
         const userPost = {
             user_id: req.session.user_id,
-            post_title: 'PLACEHOLDER',
             post_text: req.body.textContent,
-            post_date: new Date().toISOString().slice(0, 19).replace('T', ' '),
-            likes: 0,
-            dislikes: 0,
-            post_voidtime: null,
+            post_date: new Date().toLocaleDateString(undefined, { month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' }),
         }
-        try {
-            const newPost = await Bulletin_Posts.create(userPost);
-            res.status(200).json(newPost);
-        } catch (err) {
-            res.statusMessage = 'Internal Error'
-            res.status(400).end();
-        }
-    }
-    else{
-        res.statusMessage = 'You are not logged in!'
+
+        const newPost = await Bulletin_Posts.create(userPost);
+        res.status(200).json(newPost);
+
+    } catch (err) {
+        res.statusMessage = 'Uh Oh! Something bad happened on our end.'
         res.status(400).end();
     }
-    
 });
 
 
