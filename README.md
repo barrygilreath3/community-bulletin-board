@@ -48,9 +48,6 @@ https://www.figma.com/file/T3F6RFFYqqOlSMsb88rY33/Untitled?node-id=0%3A1
 - Authentication - Server only accepts calls made from browser by that same user or an authenticated admin.
 - Cache - we will distribute an auth token on login to accomplish this. This token will be cached in the browser so the user retains login through reloads.
 
-## Screenshot
-Coming Soon
-
 ## Future Development
 In a future update we plan on implementing a reply feature that will allow users to reply to past posts.
 
