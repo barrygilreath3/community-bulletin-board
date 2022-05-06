@@ -3,28 +3,28 @@
         "user_id": 1,
         "post_title": "post1",
         "post_text": "Hey, this is a test.",
-        "post_date": "2022-05-02 11:45:02",
+        "post_date": "2022-05-05 14:45:02",
         "likes": 3,
         "Dislike": 1,
-        "post_voidtime": "2023-05-02 11:45:02"
+        "post_voidtime": null
     },
     {
         "user_id": 2,
         "post_title": "post2",
         "post_text": "woah. what a cool page",
-        "post_date": "2022-05-03 14:02:03",
+        "post_date": "2022-05-05 11:02:03",
         "likes": 2,
         "Dislike": 0,
-        "post_voidtime": "2023-05-02 11:45:02"
+        "post_voidtime": null
     },
     {
         "user_id": 3,
         "post_title": "post3",
         "post_text": "OMG this is a great website. I could post here everyday. I'm testing out like a super super super super super super super super super super super super super super super super long post",
-        "post_date": "2022-05-03 16:02:03",
+        "post_date": "2022-05-04 16:02:03",
         "likes": 3,
         "Dislike": 0,
-        "post_voidtime": "2023-05-02 11:45:02"
+        "post_voidtime": null
     },
     {
         "user_id": 3,
@@ -33,42 +33,42 @@
         "post_date": "2022-05-04 12:26:53",
         "likes": 1,
         "Dislike": 3,
-        "post_voidtime": "2023-05-02 11:45:02"
+        "post_voidtime": null
     },
     {
         "user_id": 4,
         "post_title": "post5",
         "post_text": "Hey guys, this is my first post. Think you could drop me a like?",
-        "post_date": "2022-05-04 12:27:53",
+        "post_date": "2022-05-03 17:27:53",
         "likes": 4,
         "Dislike": 0,
-        "post_voidtime": "2023-05-02 11:45:02"
+        "post_voidtime": null
     },
     {
         "user_id": 2,
         "post_title": "post6",
         "post_text": "I love seeing all of your messages!",
-        "post_date": "2022-05-03 12:26:53",
+        "post_date": "2022-05-03 13:26:53",
         "likes": 4,
         "Dislike": 0,
-        "post_voidtime": "2023-05-02 11:45:02"
+        "post_voidtime": null
     },
     {
         "user_id": 3,
         "post_title": "post7",
         "post_text": "What's up people of my community?",
-        "post_date": "2022-05-04 12:26:53",
+        "post_date": "2022-05-02 14:26:53",
         "likes": 0,
         "Dislike": 0,
-        "post_voidtime": "2023-05-02 11:45:02"
+        "post_voidtime": null
     },
     {
         "user_id": 1,
         "post_title": "post8",
         "post_text": "Heyyo. How's this message? Pretty great, right?",
-        "post_date": "2022-05-05 14:55:53",
+        "post_date": "2022-05-02 10:55:53",
         "likes": 1,
         "Dislike": 3,
-        "post_voidtime": "2023-05-05 11:45:02"
+        "post_voidtime": null
     }
 ]
