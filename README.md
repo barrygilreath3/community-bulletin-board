@@ -120,7 +120,7 @@ For future development we plan features such as:
 https://github.com/barrygilreath3/community-bulletin-board/
 
 ### NPM
-pending
+https://www.npmjs.com/package/@gtbootcampproject2/community-bulletin-board
 
 ---
 
