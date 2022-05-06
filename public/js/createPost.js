@@ -14,6 +14,7 @@ const postFormHandler = async () => {
             document.location.reload();
         }
         else {
+            document.location.reload();
             alert(response.statusText);
         }
     }
