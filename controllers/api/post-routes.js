@@ -16,15 +16,19 @@ router.post('/', async (req, res) => {
             dislikes: 0,
             post_voidtime: null,
         }
+        try {
+            const newPost = await Bulletin_Posts.create(userPost);
+            res.status(200).json(newPost);
+        } catch (err) {
+            res.statusMessage = 'Internal Error'
+            res.status(400).end();
+        }
     }
-    try {
-        const newPost = await Bulletin_Posts.create(userPost);
-
-        res.status(200).json(newPost);
-    } catch (err) {
+    else{
         res.statusMessage = 'You are not logged in!'
         res.status(400).end();
     }
+    
 });
 
 
