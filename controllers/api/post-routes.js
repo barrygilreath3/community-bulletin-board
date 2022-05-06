@@ -15,9 +15,7 @@ router.post('/', authorized, async (req, res) => {
         }
 
         const newPost = await Bulletin_Posts.create(userPost);
-
         res.status(200).json(newPost);
-
 
     } catch (err) {
         res.statusMessage = 'Uh Oh! Something bad happened on our end.'
