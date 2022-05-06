@@ -3,7 +3,6 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/formatDate');
-// import sequelize connection
 const sequelize = require('./config/connection.js');
 const session = require('express-session');
 
@@ -32,7 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-//app.listen(PORT, () => console.log('Server started!'));
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
