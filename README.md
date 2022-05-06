@@ -57,7 +57,5 @@ In a future update we plan on implementing a reply feature that will allow users
 ## Links
 ### Github
 https://github.com/barrygilreath3/community-bulletin-board/
-### NPM
-pending
-### Application
-pending
+### NPM Package
+https://www.npmjs.com/package/@gtbootcampproject2/community-bulletin-board
